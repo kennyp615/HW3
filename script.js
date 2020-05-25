@@ -11,7 +11,7 @@ generateBtn.addEventListener("click", writePassword);
 //When user clicks #generate, prompt for desired password length
 //Get desired password length
 function generatePassword() {
-  var passwordLength= prompt("Please select a number between 8-128");
+  var passwordLength= prompt("Please select the number of characters for your password and it must be between 8-128");
   var passwordLengthBad = true;
   while(passwordLengthBad) {
       if (passwordLength>=8 && passwordLength<=128) {
@@ -19,7 +19,7 @@ function generatePassword() {
       }
       //If entered input is not valid, display prompt again
       else {
-          alert("Password must be between 8-128 characters.");
+          alert("Invalid selection, Please select a number between 8-128 characters.");
           passwordLength= prompt("Enter a number between 8-128");
       }
   }
